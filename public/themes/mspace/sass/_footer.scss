@@ -1,0 +1,42 @@
+
+footer {
+    position: relative;
+    padding: 51px 0;
+    font-size: 15px;
+    background-size: cover;
+    h4.footer-title {
+        text-transform: uppercase;
+        font-size: 18px;
+        position: relative;
+        display: inline-block;
+        color: $white;
+        font-weight: bold;
+    }
+    .footer-description {
+        margin-top: 20px;
+        color: $white;
+        line-height: 35px;
+        i {
+            color: $white;
+        }
+        a {
+            color: $white;
+            text-decoration: none;
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+    .footer-filter {
+        position: absolute;
+        background: rgba(0,0,0,0.72);
+        left: 0;
+        top:0;
+        bottom: 0;
+        right: 0;
+    }
+}

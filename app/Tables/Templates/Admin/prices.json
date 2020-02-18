@@ -1,0 +1,62 @@
+{
+    "crtNo": true,
+    "routePrefix": "prices",
+    "buttons": [{
+            "type": "global",
+            "icon": "plus",
+            "class": null,
+            "routeSuffix": "create",
+            "event": "create",
+            "action": "router",
+            "label": "Tạo"
+        },
+        {
+            "type": "row",
+            "icon": "trash-alt",
+            "class": "is-row-button",
+            "routeSuffix": "destroy",
+            "event": "destroy",
+            "action": "ajax",
+            "method": "DELETE",
+            "confirmation": true,
+            "message": "Bạn có chắc muốn xóa báo giá này?",
+            "postEvent": "destroyed"
+        },
+        {
+            "type": "row",
+            "icon": "pencil-alt",
+            "class": "is-naked",
+            "event": "edit",
+            "routeSuffix": "edit",
+            "action": "router"
+        }
+    ],
+    "columns": [{
+            "label": "Tiêu đề",
+            "name": "title",
+            "data": "title",
+            "meta": [
+                "searchable",
+                "sortable"
+            ]
+        },
+        {
+            "label": "Giá",
+            "name": "price",
+            "data": "price",
+            "meta": [
+                "searchable",
+                "sortable",
+                "slot"
+            ]
+        },
+        {
+            "label": "Ngày Tạo",
+            "name": "created_at",
+            "data": "created_at",
+            "meta": [
+                "sortable"
+            ]
+        }
+    ]
+}

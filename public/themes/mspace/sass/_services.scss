@@ -1,0 +1,47 @@
+.services-item {
+    box-shadow: 0 0 0 1px #ccc;
+    .services-item-header {
+        text-align: center;
+        color: $maincolor;
+        font-weight: 600;
+        border-bottom: 3px solid $maincolor;
+        font-size: 1.4rem;
+        padding: 10px;
+    }
+    .services-item-body {
+        padding: 15px 10px;
+        background: rgba($color: $maincolor, $alpha: 0.1);
+        text-align: justify;
+    }
+    .service-item-bottom {
+        text-align: center;
+        padding: 0 20px 20px;
+        background: rgba($color: $maincolor, $alpha: 0.1);
+        .service-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #ccc;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: orange;
+            text-decoration: none;
+            i {
+                border: 1px solid;
+                border-radius: 0 50% 50% 0;
+                font-weight: 600;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: 0 0 0 1px $maincolor;
+        .services-item-header {
+            border-color: $maincolor;
+        }
+        .service-item-bottom {
+            .service-btn {
+                background: $maincolor;
+                color: $white;
+            }
+        }
+    }
+}

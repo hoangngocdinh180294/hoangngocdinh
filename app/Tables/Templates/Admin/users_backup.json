@@ -1,0 +1,55 @@
+{
+    "crtNo" : true,
+    "routePrefix": "users",
+    "buttons": [
+        {
+            "type": "global",
+            "icon": "plus",
+            "class": null,
+            "routeSuffix" : "create",
+            "event" : "create",
+            "action" : "router",
+            "label" : "Tạo"
+        },
+        {
+            "type": "row",
+            "icon": "trash-alt",
+            "class": "is-row-button",
+            "routeSuffix" : "destroy",
+            "event": "destroy",
+            "action" : "ajax",
+            "method" : "DELETE",
+            "confirmation" : true,
+            "message" : "Bạn có chắc muốn xóa bản ghi này?",
+            "postEvent" : "destroyed"
+        },
+        {
+            "type": "row",
+            "icon": "pencil-alt",
+            "class": "is-naked",
+            "event": "edit",
+            "routeSuffix" : "edit",
+            "action": "router"
+        }
+    ],
+    "columns": [
+        {
+            "label": "Tên",
+            "name": "name",
+            "data": "name",
+            "meta": [
+                "searchable",
+                "sortable"
+            ]
+        },
+        {
+            "label": "Email",
+            "name": "email",
+            "data": "email",
+            "meta": [
+                "sortable",
+                "searchable"
+            ]
+        }
+    ]
+}

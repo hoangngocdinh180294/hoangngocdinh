@@ -1,0 +1,25 @@
+{
+    "crtNo" : true,
+    "routePrefix": "users",
+    "buttons": [],
+    "columns": [
+        {
+            "label": "Tên",
+            "name": "name",
+            "data": "name",
+            "meta": [
+                "searchable",
+                "sortable"
+            ]
+        },
+        {
+            "label": "Email",
+            "name": "email",
+            "data": "email",
+            "meta": [
+                "sortable",
+                "searchable"
+            ]
+        }
+    ]
+}

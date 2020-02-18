@@ -1,0 +1,91 @@
+{
+    "crtNo" : true,
+    "routePrefix": "catalogs",
+    "buttons": [
+        {
+            "type": "global",
+            "icon": "plus",
+            "class": null,
+            "routeSuffix" : "create",
+            "event" : "create",
+            "action" : "router",
+            "label" : "Tạo"
+        },
+        {
+            "type": "row",
+            "icon": "trash-alt",
+            "class": "is-row-button",
+            "routeSuffix" : "destroy",
+            "event": "destroy",
+            "action" : "ajax",
+            "method" : "DELETE",
+            "confirmation" : true,
+            "message" : "Bạn có chắc muốn xóa bản ghi này?",
+            "postEvent" : "destroyed"
+        },
+        {
+            "type": "row",
+            "icon": "pencil-alt",
+            "class": "is-naked",
+            "event": "edit",
+            "routeSuffix" : "edit",
+            "action": "router"
+        }
+    ],
+    "columns": [
+        {
+            "label": "Tên",
+            "name": "name",
+            "data": "name",
+            "meta": [
+                "searchable",
+                "sortable"
+            ]
+        },
+        {
+            "label": "Tên Dẫn Link",
+            "name": "slug",
+            "data": "slug",
+            "meta": [
+                "searchable",
+                "sortable"
+            ]
+        },
+        {
+            "label": "Nội Dung",
+            "name": "body",
+            "data": "body",
+            "meta": [
+                "sortable",
+                "searchable"
+            ]
+        },
+        {
+            "label": "Link",
+            "name": "link",
+            "data": "link",
+            "meta": [
+                "sortable",
+                "searchable"
+            ]
+        },
+        {
+            "label": "Thứ Tự",
+            "name": "order",
+            "data": "order",
+            "meta": [
+                "sortable",
+                "searchable"
+            ]
+        },
+        {
+            "label": "Trạng Thái",
+            "name": "status",
+            "data": "status",
+            "meta": [
+                "sortable",
+                "slot"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "crtNo" : true,
+    "routePrefix": "customercontacts",
+    "buttons": [
+      {
+        "type": "row",
+        "icon": "trash-alt",
+        "class": "is-row-button",
+        "routeSuffix" : "destroy",
+        "event": "destroy",
+        "action" : "ajax",
+        "method" : "DELETE",
+        "confirmation" : true,
+        "message" : "Bạn có chắc muốn xóa bản ghi này?",
+        "postEvent" : "destroyed"
+      }
+    ],
+    "columns": [
+        {
+            "label": "Họ tên khách hàng",
+            "name": "full_name",
+            "data": "customer_contacts.full_name",
+            "meta": [
+              "sortable",
+              "searchable"
+            ]
+      },
+      {
+        "label": "Email",
+        "name": "email",
+        "data": "customer_contacts.email",
+        "meta": [
+          "sortable",
+          "searchable"
+        ]
+      },
+      {
+        "label": "Số điện thoại",
+        "name": "phone",
+        "data": "customer_contacts.phone",
+        "meta": [
+          "searchable",
+          "sortable"
+        ]
+      },
+      {
+        "label": "Ngày",
+        "name": "created_at",
+        "data": "customer_contacts.created_at",
+        "meta": [
+          "sortable",
+          "date",
+          "sort:DESC"
+        ]
+      }
+    ]
+  }

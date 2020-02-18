@@ -1,0 +1,105 @@
+.recent-post-content {
+    .post-item {
+        display: flex;
+        padding: 3px;
+        border-bottom: 1px dashed $maincolor;
+        a {
+            color: #004E92;
+            font-family: Roboto-Medium!important;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        &:first-child {
+            border-top: 1px dashed $maincolor;
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    .post-item-prepend {
+        flex: 50px 0 0;
+        margin-right: 5px;
+        border-right: 2px solid $maincolor;
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .cat-icon {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+}
+
+.box-sidebar {
+    border: 1px dashed $maincolor;
+    h3 {
+        text-transform: uppercase;
+        font-size: 18px;
+        position: relative;
+        display: inline-block;
+        color: $maincolor;
+        font-weight: bold;
+        padding: 10px;
+        &:after {
+            content: '';
+            width: 90px;
+            height: 3px;
+            background: $maincolor;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            display: block;
+            margin-top: 5px;
+        }
+    }
+}
+
+.wrap-post-title {
+    display: block;
+    border-radius: 10px 0 10px;
+    background-color: $grey;
+    padding: 10px 10px 3px;
+    position: relative;
+    .post-date {
+        color: $orange;
+    }
+    &:before {
+        content: '';
+        height: 80%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-left: 2px solid $maincolor;
+    }
+    &:hover {
+        &:before,
+        .post-main-title:after {
+            border-color: $orange;
+        }
+    }
+}
+
+.post-main-title {
+    color: $maincolor;
+    font-weight: 600;
+    position: relative;
+    font-size: 1.6rem;
+    &:after {
+        content: '';
+        width: 300px;
+        border-top: 2px solid $maincolor;
+        margin-left: -10px;
+        margin-top: 6px;
+        display: block;
+    }
+}
+
+.wrap-post-content {
+    text-align: justify;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

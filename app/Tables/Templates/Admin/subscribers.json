@@ -1,0 +1,39 @@
+{
+    "crtNo" : true,
+    "routePrefix": "subscribers",
+    "buttons": [
+        {
+            "type": "row",
+            "icon": "trash-alt",
+            "class": "is-row-button",
+            "routeSuffix" : "destroy",
+            "event": "destroy",
+            "action" : "ajax",
+            "method" : "DELETE",
+            "confirmation" : true,
+            "message" : "Bạn có chắc muốn xóa bản ghi này?",
+            "postEvent" : "destroyed"
+          }
+    ],
+    "columns": [
+        {
+            "label": "Email",
+            "name": "email",
+            "data": "email",
+            "meta": [
+                "searchable",
+                "sortable"
+            ]
+        },  
+        {
+            "label": "Ngày",
+            "name": "created_at",
+            "data": "created_at",
+            "meta": [
+                "sortable",
+                "date",
+                "sort:DESC"
+            ]
+        }
+    ]
+}
